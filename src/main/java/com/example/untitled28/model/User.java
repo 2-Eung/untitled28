@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor           // 우리가 사용해야할 생성자
 @Builder                      // 각 필드에 대입하기 쉽게해줌 (선택적 대입도 가능)
 public class User {
-    @Id                                                 // 고유값 이라는 뜻?????????
+    @Id                                                 // 이것이 이 클래스 ( 모델 ) 의 Id 역할
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 이전처럼 1 씩증가하는 방식
     private Integer id;
 
