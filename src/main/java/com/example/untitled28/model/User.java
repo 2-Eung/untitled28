@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 
 
 @Entity                       // JPA 필수구성요소
-@Table(name="users")          // user 라는 이름으로 테이블이 생성됨
+@Table(name="users")          // users 라는 이름으로 테이블이 생성됨 (생략하면 모델명과 같은이름 User 로 생성)
 @Data                         // 게터, 세터, final 등 편의성 제공
 @NoArgsConstructor            // 스프링부트 가 필요로할 수도 있는 생성자
 @AllArgsConstructor           // 우리가 사용해야할 생성자
 @Builder                      // 각 필드에 대입하기 쉽게해줌 (선택적 대입도 가능)
 public class User {
-    @Id                                                 // 이것이 이 클래스 ( 모델 ) 의 Id 역할
+    @Id                                                 // 이것이 이 클래스/모델 의 Id 역할
     @GeneratedValue(strategy = GenerationType.IDENTITY) // 이전처럼 1 씩증가하는 방식
     private Integer id;
 
